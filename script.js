@@ -3,8 +3,8 @@
 
 function generatePassword() {
   var pass = ''
-
-  for (let i = 0; i < Length; i++) {
+  var passLength = 10;
+  for (let i = 0; i < passLength; i++) {
     // console.log('picking a letter!!', lowerBank[Math.floor(Math.random() * lowerBank.length) ]);
     pass += availableBank[Math.floor(Math.random() * availableBank.length) ]
     // pass += upperBank[Math.floor(Math.random() * upperBank.length) ] 
@@ -30,14 +30,14 @@ function writePassword() {
   //passwordText.value = password;
 
   alert("let's make you a password!")  
-  var Length = parseInt(prompt('please enter the length of the password between 8-120 characters')); 
+  var length = parseInt(prompt('please enter the length of the password between 8-120 characters')); 
   
-  if (Length < 8) { 
+  if (length < 8) { 
     console.log("password is too short");
     alert("password is too short")
   } 
   
-  if (Length > 120) {
+  if (length > 120) {
     console.log("password is too long"); 
     alert("password is too long")
   }
